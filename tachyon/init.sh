@@ -44,7 +44,7 @@ else
       elif [[ "$HADOOP_MAJOR_VERSION" == "2" ]]; then
         wget https://s3.amazonaws.com/Tachyon/tachyon-0.6.4-cdh4-bin.tar.gz
       else
-        wget https://s3.amazonaws.com/Tachyon/tachyon-0.6.4-hadoop2.4-bin.tar.gz
+        wget https://s3.amazonaws.com/Tachyon/tachyon-0.6.4-hadoop2.6-bin.tar.gz
       fi
       ;;
     *)
@@ -53,7 +53,7 @@ else
       elif [[ "$HADOOP_MAJOR_VERSION" == "2" ]]; then
         wget https://s3.amazonaws.com/Tachyon/tachyon-$TACHYON_VERSION-cdh4-bin.tar.gz
       else
-        wget https://s3.amazonaws.com/Tachyon/tachyon-$TACHYON_VERSION-hadoop2.4-bin.tar.gz
+        wget https://s3.amazonaws.com/Tachyon/tachyon-$TACHYON_VERSION-hadoop2.6-bin.tar.gz
       fi
       if [ $? != 0 ]; then
         echo "ERROR: Unknown Tachyon version"
