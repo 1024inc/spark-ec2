@@ -27,7 +27,7 @@ case "$HADOOP_MAJOR_VERSION" in
     rm -rf /root/ephemeral-hdfs/etc/hadoop/
     ln -s /root/ephemeral-hdfs/conf /root/ephemeral-hdfs/etc/hadoop
     ;;
-  yarn)
+  *)
     wget https://www.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz
     echo "Unpacking Hadoop"
     tar xvzf hadoop-*.tar.gz > /tmp/spark-ec2_hadoop.log
@@ -39,9 +39,6 @@ case "$HADOOP_MAJOR_VERSION" in
     ln -s /root/ephemeral-hdfs/conf /root/ephemeral-hdfs/etc/hadoop
     ;;
 
-  *)
-     echo "ERROR: Unknown Hadoop version"
-     return 1
 esac
 cp /root/hadoop-native/* ephemeral-hdfs/lib/native/
 /root/spark-ec2/copy-dir /root/ephemeral-hdfs

@@ -42,8 +42,8 @@ case "$HADOOP_MAJOR_VERSION" in
     $EPHEMERAL_HDFS/sbin/start-yarn.sh
     ;;
   *)
-     echo "ERROR: Unknown Hadoop version"
-     return -1
+    $EPHEMERAL_HDFS/sbin/start-dfs.sh
+    ;;
 esac
 
 popd > /dev/null

@@ -26,7 +26,7 @@ case "$HADOOP_MAJOR_VERSION" in
     rm -rf /root/persistent-hdfs/etc/hadoop/
     ln -s /root/persistent-hdfs/conf /root/persistent-hdfs/etc/hadoop
     ;;
-  yarn)
+  *)
     wget https://www.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz
     echo "Unpacking Hadoop"
     tar xvzf hadoop-*.tar.gz > /tmp/spark-ec2_hadoop.log
