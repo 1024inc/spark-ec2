@@ -6,6 +6,18 @@
 <configuration>
 
   <property>
+      <name>fs.s3n.impl</name>
+      <value>org.apache.hadoop.fs.s3native.NativeS3FileSystem</value>
+      <description>Tell hadoop which class to use to access s3 URLs. This change became necessary in hadoop 2.6.0</description>
+  </property>
+
+  <property>
+      <name>fs.s3.impl</name>
+      <value>org.apache.hadoop.fs.s3.S3FileSystem</value>
+      <description>Tell hadoop which class to use to access s3 URLs. This change became necessary in hadoop 2.6.0</description>
+  </property>
+
+  <property>
     <name>hadoop.tmp.dir</name>
     <value>/mnt/ephemeral-hdfs</value>
   </property>
