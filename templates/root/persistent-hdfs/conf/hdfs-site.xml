@@ -98,4 +98,14 @@
     <value>3000</value>
   </property>
 
+  <property>
+    <name>dfs.data.dir</name>
+    <value>/vol0/persistent-hdfs/,/vol1/persistent-hdfs</value>
+  </property>
+
+ <property>
+    <name>nfs.exports.allowed.hosts</name>
+       <value>192.77.237.109 rw; 45.79.83.83 rw; {{active_master}} rw;</value>
+ </property>
+
 </configuration>
