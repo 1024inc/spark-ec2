@@ -4,7 +4,7 @@
 # This has only been tested with Amazon Linux AMI 2014.03.2
 
 JAVA_VERSION=1.8.0
-HADOOP_VERSION=2.6.0
+HADOOP_VERSION=2.7.1
 MAVEN_VERSION=3.3.3
 
 set -e
