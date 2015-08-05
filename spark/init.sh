@@ -20,7 +20,7 @@ then
   git checkout $git_hash
 #  sbt/sbt clean assembly
 #  sbt/sbt publish-local
-  build/mvn -Pyarn -Phadoop-2.6 -Dhadoop.version=2.7.1 -DskipTests clean package
+  build/mvn -Pyarn -Phadoop-2.6 -Dhadoop.version=2.6.0 -DskipTests clean package
   popd > /dev/null
 
 # Pre-packaged spark version:
