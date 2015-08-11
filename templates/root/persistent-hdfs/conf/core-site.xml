@@ -7,12 +7,12 @@
 
   <property>
     <name>hadoop.tmp.dir</name>
-    <value>/vol/persistent-hdfs</value>
+    <value>/vol0/hadoop-tmp-dir</value>
   </property>
 
   <property>
-    <name>fs.default.name</name>
-    <value>hdfs://{{active_master}}:9010</value>
+    <name>io.seqfile.local.dir</name>
+    <value>/vol0/io,/vol1/io</value>
   </property>
 
   <property>

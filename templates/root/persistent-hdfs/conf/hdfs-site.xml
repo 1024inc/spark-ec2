@@ -19,7 +19,7 @@
   </property>
 
   <property>
-    <name>dfs.secondary.http.address</name>
+    <name>dfs.namenode.secondary.http-address</name>
     <value>0.0.0.0:60090</value>
     <description>
       The secondary namenode http server address and port.
@@ -53,14 +53,24 @@
       If the port is 0 then the server will start on a free port.
     </description>
   </property>
-  
+
   <property>
-    <name>dfs.http.address</name>
+    <name>dfs.namenode.http-address</name>
     <value>0.0.0.0:60070</value>
     <description>
       The address and the base port where the dfs namenode web ui will listen on.
       If the port is 0 then the server will start on a free port.
     </description>
+  </property>
+
+  <property>
+    <name>dfs.namenode.http-bind-host</name>
+    <value>0.0.0.0</value>
+  </property>
+
+<property>
+    <name>dfs.namenode.datanode.registration.ip-hostname-check</name>
+    <value>false</value>
   </property>
 
   <property>
@@ -98,9 +108,20 @@
     <value>3000</value>
   </property>
 
+
   <property>
-    <name>dfs.data.dir</name>
-    <value>/vol0/persistent-hdfs/,/vol1/persistent-hdfs</value>
+    <name>dfs.datanode.data.dir</name>
+    <value>file:///vol0/persistent-hdfs,file:///vol1/persistent-hdfs</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>file:///vol0/dfs/name,file:///vol1/dfs/name</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.checkpoint.dir</name>
+    <value>file:///vol0/dfs/namesecondary,file:///vol1/dfs/namesecondary</value>
   </property>
 
  <property>
