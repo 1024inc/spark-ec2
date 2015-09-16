@@ -17,7 +17,7 @@ export HDFS_URL=hdfs://$SPARK_PRIVATE_DNS:9010
 
 export SPARK_SUBMIT_LIBRARY_PATH="$SPARK_SUBMIT_LIBRARY_PATH:/root/persistent-hdfs/lib/native/"
 export SPARK_SUBMIT_CLASSPATH="$SPARK_CLASSPATH:$SPARK_SUBMIT_CLASSPATH:/root/persistent-hdfs/conf"
-export SPARK_LOCAL_DIRS="/vol0/spark, /vol1/spark"
+export SPARK_LOCAL_DIRS="/vol0/spark,/vol1/spark"
 
 # Bind Spark's web UIs to this machine's public EC2 hostname otherwise fallback to private IP:
 SPARK_PUBLIC_DNS=`wget -q -O - http://169.254.169.254/latest/meta-data/public-hostname`
