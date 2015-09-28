@@ -35,4 +35,7 @@ fi
 
 popd > /dev/null
 
+/root/persistent-hdfs/sbin/start-all.sh && /root/persistent-hdfs/sbin/restart-nfs.sh
+/root/spark/sbin/start-all.sh
+
 exit 0
