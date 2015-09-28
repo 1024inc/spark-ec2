@@ -12,8 +12,10 @@ if [[ -z "$1" ]]; then
 	exit 1
 fi
 
-/root/spark/sbin/stop-all.sh
-/root/persistent-hdfs/sbin/stop-all.sh
+if  [[ -d "/root/spark" ]]; then
+	/root/spark/sbin/stop-all.sh
+	/root/persistent-hdfs/sbin/stop-all.sh
+fi
 
 # Make sure we are in the spark-ec2 directory
 pushd /root/spark-ec2 > /dev/null
