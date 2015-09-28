@@ -2,9 +2,17 @@
 
 pushd /root > /dev/null
 
-if [ -d "spark" ]; then
-  echo "Spark seems to be installed. Exiting."
-  return
+if [[ $# -eq 0 ]]; then
+	if [ -d "spark" ]; then
+	  echo "Spark seems to be installed. Exiting."
+	  return
+	fi
+fi
+if [[ $# -gt 0 ]]; then
+	if [[ "$1" != "upgrade" ]];then
+		echo "options available: upgrade"
+		exit 1
+	fi
 fi
 
 # Github tag:
@@ -142,7 +150,8 @@ else
   echo "Unpacking Spark"
   tar xvzf spark-*.tgz > /tmp/spark-ec2_spark.log
   rm spark-*.tgz
-  mv `ls -d spark-* | grep -v ec2` spark
+  rsync -av `ls -d spark-* | grep -v ec2` /root/spark
+
 fi
 
 popd > /dev/null
