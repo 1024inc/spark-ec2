@@ -15,10 +15,6 @@ if [[ $# -gt 0 ]]; then
 	fi
 fi
 
-#Stop the active jobs
-persistent-hdfs/sbin/stop-all.sh
-spark/sbin/stop-all.sh
-
 # Github tag:
 if [[ "$SPARK_VERSION" == *\|* ]]
 then
