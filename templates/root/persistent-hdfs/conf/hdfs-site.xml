@@ -121,7 +121,7 @@
 
  <property>
     <name>nfs.exports.allowed.hosts</name>
-       <value>192.77.237.109 rw; 45.79.83.83 rw; {{active_master}} rw;</value>
+       <value>52.9.10.52 rw; 192.77.237.109 rw; 45.79.83.83 rw; {{active_master}} rw;</value>
  </property>
 
 </configuration>
